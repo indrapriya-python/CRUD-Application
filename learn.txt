@@ -1,0 +1,29 @@
+# create project
+python -m django startproject myproject
+cd myproject
+myproject/ 
+# createapp
+python manage.py startapp app
+go to setting.py in your project INSTALL_APP["app"]
+go to urls.py file in your project include your app in your project
+use this path = path('',include('app.urls'))
+then go to your app and create a file urls.py and use 
+from django.urls import path
+urlpatterns = [
+]
+and start your coding in your app 
+than use run server so hear is a command 
+python manage.py runserver
+hear your server ip =  http://127.0.0.1:8000/
+you want to stop server user Ctrl+c
+
+
+# Hear we want to render templates
+1. Create templates forlder in your app
+2. create html file in templates folder 
+3. create a funcation in view.py 
+def index(request):
+    return render(request, "index.html") # hear we want to render your templte index.html so use render packeg 
+4.Create a url in your app urls.py file 
+    path('',views.index),
+
