@@ -32,8 +32,14 @@ tr:nth-child(even) {
   <tr>
     <td>{{i.name}}</td>
     <td>{{i.email}}</td>
-  </tr>
  
+  <td>
+    <a href="/delete/{{i.pk}}" class="btn btn-denger">delete</a>
+  
+    <a href="/update/{{i.id}}" class="btn btn-primary">Edit</a>
+  </tr>
+</td>
+
 </table>
 {% endfor %}
 
